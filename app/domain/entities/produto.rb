@@ -2,12 +2,12 @@ class Produto
   attr_reader :id
   attr_accessor :nome, :descricao, :preco, :qtd_estoque
 
-  def initialize(nome:, descricao:, preco:, qtd_estoque:)
-    @id = Time.now.to_i
-    @nome = nome
-    @descricao = descricao
-    @preco = preco
-    @qtd_estoque = qtd_estoque
+  def initialize(opts={})
+    @id = opts[:id]
+    @nome = opts[:nome]
+    @descricao = opts[:descricao]
+    @preco = opts[:preco]
+    @qtd_estoque = opts[:qtd_estoque]
   end
 
   def sem_estoque?
@@ -20,6 +20,8 @@ class Produto
 
   def retirar(quantidade)
     @qtd_estoque -= quantidade
+
+    JsonRepositorio.atualizar(id, qtd_estoque)
   end
 
   def calcular_valor_total

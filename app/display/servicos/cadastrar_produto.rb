@@ -1,7 +1,3 @@
-require_relative '../operacoes_de_tela'
-require_relative '../../domain/entities/produto'
-require_relative '../../domain/services/produto_servico'
-
 def cadastrar_produto
   mensagem_verde 'Iniciando cadastro de produtos', true, true
 
@@ -22,12 +18,13 @@ def cadastrar_produto
   limpar_tela
 
   ProdutoServico.adicionar(
-    Produto.new(
+    Produto.new({
+      id: Time.now.to_i,
       nome: nome,
       descricao: descricao,
       preco: preco,
       qtd_estoque: qtd_estoque
-    )
+    })
   )
 
   mensagem "#{nome} cadastrado com sucesso!"

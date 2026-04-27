@@ -1,5 +1,3 @@
-require_relative '../operacoes_de_tela'
-require_relative '../../domain/services/produto_servico'
 require 'terminal-table'
 
 def listar_produtos

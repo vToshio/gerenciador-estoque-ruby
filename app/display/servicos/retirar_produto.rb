@@ -1,6 +1,3 @@
-require_relative '../operacoes_de_tela'
-require_relative '../../domain/services/produto_servico'
-
 def retirar_produto
   if ProdutoServico.todos.empty?
     mensagem_vermelha 'Você ai  nda não possui produtos cadastrados para remover.'
