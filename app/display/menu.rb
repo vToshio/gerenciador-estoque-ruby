@@ -1,8 +1,6 @@
-require_relative 'servicos/cadastrar_produto'
-require_relative 'servicos/listar_produtos'
-require_relative 'servicos/retirar_produto'
+def iniciar_menu(repo, arquivo)
+  menu = MenuServico.new(repo, arquivo)
 
-def iniciar_menu
   loop do
     mensagem_amarela 'Escolha uma das opções abaixo:', false, false
     mensagem_amarela '1. Cadastro de Produtos', false, false
@@ -13,11 +11,11 @@ def iniciar_menu
     opcao = gets.to_i
     case opcao
     when 1
-      cadastrar_produto
+      menu.cadastrar_produto
     when 2
-      listar_produtos
+      menu.listar_produtos
     when 3
-      retirar_produto
+      menu.retirar_produto
     when 4
       mensagem_vermelha 'Encerrando o programa...', true, true
       exit 1

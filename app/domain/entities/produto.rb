@@ -20,8 +20,6 @@ class Produto
 
   def retirar(quantidade)
     @qtd_estoque -= quantidade
-
-    JsonRepositorio.atualizar(id, qtd_estoque)
   end
 
   def calcular_valor_total
