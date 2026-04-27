@@ -1,6 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (13.0.0)
+      reline (>= 0.6.0)
+    io-console (0.8.2)
+    reline (0.6.3)
+      io-console (~> 0.5)
     terminal-table (4.0.0)
       unicode-display_width (>= 1.1.1, < 4)
     unicode-display_width (3.2.0)
@@ -12,9 +17,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  byebug (~> 13.0)
   terminal-table (~> 4.0)
 
 CHECKSUMS
+  byebug (13.0.0) sha256=d2263efe751941ca520fa29744b71972d39cbc41839496706f5d9b22e92ae05d
+  io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
+  reline (0.6.3) sha256=1198b04973565b36ec0f11542ab3f5cfeeec34823f4e54cebde90968092b1835
   terminal-table (4.0.0) sha256=f504793203f8251b2ea7c7068333053f0beeea26093ec9962e62ea79f94301d2
   unicode-display_width (3.2.0) sha256=0cdd96b5681a5949cdbc2c55e7b420facae74c4aaf9a9815eee1087cb1853c42
   unicode-emoji (4.2.0) sha256=519e69150f75652e40bf736106cfbc8f0f73aa3fb6a65afe62fefa7f80b0f80f

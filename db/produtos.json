@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nome": "Maçã",
+    "descricao": "Maçã da Turma da Mônica, 0.5Kg",
+    "preco": 12.5,
+    "qtd_estoque": 25
+  },
+  {
+    "id": 2,
+    "nome": "Tênis Nike",
+    "descricao": "Nike Jordan Amarelo",
+    "preco": 599.99,
+    "qtd_estoque": 15
+  },
+  {
+    "id": 3,
+    "nome": "Camiseta Polo Wear",
+    "descricao": "Camiseta com gola de 3 botões, e laranja.",
+    "preco": 159.5,
+    "qtd_estoque": 10
+  },
+  {
+    "id": 1777298084,
+    "nome": "Tênis Nike",
+    "descricao": "Verde",
+    "preco": 259.99,
+    "qtd_estoque": 25
+  },
+  {
+    "id": 1777299633,
+    "nome": "Novo produto no Estoque",
+    "descricao": "Mais um",
+    "preco": 19.8,
+    "qtd_estoque": 10
+  },
+  {
+    "id": 1777299793,
+    "nome": "Teste",
+    "descricao": "Teste ",
+    "preco": 18.8,
+    "qtd_estoque": 20
+  },
+  {
+    "id": 1777302280,
+    "nome": "teste",
+    "descricao": "mais unm",
+    "preco": 25.0,
+    "qtd_estoque": 90
+  },
+  {
+    "id": 1777302396,
+    "nome": "d",
+    "descricao": "d",
+    "preco": 0.0,
+    "qtd_estoque": 0
+  }
+]

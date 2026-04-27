@@ -32,10 +32,10 @@ end
 def imprimir_tabela(produtos)
   tabela = Terminal::Table.new do |t|
     t.title = 'Produtos'
-    t.headings = ['ID', 'Nome do Produto', 'Descrição', 'Preço (R$)', 'Quantidade']
+    t.headings = ['ID', 'Nome do Produto', 'Descrição', 'Preço (R$)', 'Quantidade', 'Valor em Estoque']
 
-    produtos.each do |row|
-      t.add_row [row[:id], row[:nome], row[:descricao], row[:preco], row[:qtd_estoque]]
+    produtos.each do |produto|
+      t.add_row [produto.id, produto.nome, produto.descricao, produto.preco, produto.qtd_estoque, produto.calcular_valor_total]
     end
   end
   puts tabela
