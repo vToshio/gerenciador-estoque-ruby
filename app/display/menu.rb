@@ -1,8 +1,8 @@
-require_relative '../core/cadastrar_produto'
-require_relative '../core/listar_produtos'
-require_relative '../core/retirar_produto'
+require_relative 'servicos/cadastrar_produto'
+require_relative 'servicos/listar_produtos'
+require_relative 'servicos/retirar_produto'
 
-def iniciar_menu(produtos=[])
+def iniciar_menu
   loop do
     mensagem_amarela 'Escolha uma das opções abaixo:', false, false
     mensagem_amarela '1. Cadastro de Produtos', false, false
@@ -13,11 +13,11 @@ def iniciar_menu(produtos=[])
     opcao = gets.to_i
     case opcao
     when 1
-      cadastrar_produto(produtos)
+      cadastrar_produto
     when 2
-      listar_produtos(produtos)
+      listar_produtos
     when 3
-      retirar_produto(produtos)
+      retirar_produto
     when 4
       mensagem_vermelha 'Encerrando o programa...', true, true
       exit 1

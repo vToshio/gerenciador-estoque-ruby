@@ -1,6 +1,8 @@
-require_relative '../display/operacoes_de_tela'
+require_relative '../operacoes_de_tela'
+require_relative '../../domain/entities/produto'
+require_relative '../../domain/services/produto_servico'
 
-def cadastrar_produto(produtos)
+def cadastrar_produto
   mensagem_verde 'Iniciando cadastro de produtos', true, true
 
   mensagem 'Digite o nome do produto: ', false, false
@@ -19,14 +21,15 @@ def cadastrar_produto(produtos)
   qtd_estoque = gets.chomp.to_i
   limpar_tela
 
-  produtos << {
-    id: Time.now.to_i,
-    nome: nome,
-    descricao: descricao,
-    preco: preco,
-    qtd_estoque: qtd_estoque
-  }
- 
+  ProdutoServico.adicionar(
+    Produto.new(
+      nome: nome,
+      descricao: descricao,
+      preco: preco,
+      qtd_estoque: qtd_estoque
+    )
+  )
+
   mensagem "#{nome} cadastrado com sucesso!"
 rescue TypeError
   mensagem_vermelha 'Tipo de dado incorreto. Cancelando cadastro de produto.', true, true
